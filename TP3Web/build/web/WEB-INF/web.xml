@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>display</servlet-name>
+        <servlet-class>display</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>newStudent</servlet-name>
+        <servlet-class>newStudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deleteAllStudent</servlet-name>
+        <servlet-class>deleteAllStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>display</servlet-name>
+        <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>newStudent</servlet-name>
+        <url-pattern>/newStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deleteAllStudent</servlet-name>
+        <url-pattern>/deleteAllStudent</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

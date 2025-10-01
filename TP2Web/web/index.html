@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="0; url=./calcul">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            form {
+                background-color: white;
+                padding: 30px 40px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 300px;
+            }
+
+            div {
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            input[type="number"],
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 12px;
+                width: 100%;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            
+            .resultat{
+                margin-top:50px;
+                font-sie: 10px;
+            }
+        </style>
+    </head>
+    <body>        
+        <form action="./calcul" method="get">
+            Number1 : <input type="number" name="nombre1"> <br>
+            Number2 : <input type="number" name="nombre2"> <br>
+            <select name="operand">
+                <option value="+"> + </option>
+                <option value="-"> - </option>
+                <option value="*"> * </option>
+                <option value="/"> / </option>
+            </select>
+
+            <input type="submit" value="Calculate">
+        </form>
+        <div class="resultat" id="resultat">Pas de resultat</div>
+        
+        
+        
+    </body>
+    
+    <script>
+        // Lire les paramètres de l'URL
+        const params = new URLSearchParams(window.location.search);
+        const resultat = params.get("resultat");
+
+        if (resultat !== null) {
+            document.getElementById("resultat").textContent = "Résultat : " + resultat;
+        }
+    </script>
+</html>
