@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Calculatrice</p>
+
+        <form action="/hello" method="post">
+            <label for="num1">Nombre 1 :</label>
+            <input type="number" name="num1" required th:value="${num1}"/>
+            <label for="num2">Nombre 2 :</label>
+            <input type="number" name="num2" required th:value="${num2}"/>
+            
+            <label for="operand">Opérateur :</label>
+            <select id="operand" name="operand" required th:value="${operand}"/>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select><br><br>
+        
+            <button type="submit">Calculer</button>
+        </form>
+
+    </body>
+</html>
