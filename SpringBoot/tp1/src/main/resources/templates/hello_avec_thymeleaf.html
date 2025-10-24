@@ -10,13 +10,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <p>Calculatrice</p>
+        <p>Calculatrice</p> 
 
         <form action="/hello" method="post">
             <label for="num1">Nombre 1 :</label>
-            <input type="number" name="num1" required th:value="${num1}"/>
+            <input type="number" name="num1" required/>
             <label for="num2">Nombre 2 :</label>
-            <input type="number" name="num2" required th:value="${num2}"/>
+            <input type="number" name="num2" required/>
             
             <label for="operand">Opérateur :</label>
             <select id="operand" name="operand" required th:value="${operand}"/>
