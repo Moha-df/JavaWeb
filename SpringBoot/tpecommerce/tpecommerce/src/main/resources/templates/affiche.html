@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <th:block th:each="elt:${tabElt}">
+        <span th:text="${elt}"/><br>
+        <p>Quantité :</p>
+        <form action="/ajouterProduit" method="post">
+            <input type="hidden" name="idProduit" th:value="${elt.id}">
+            <input type="number" name="quantite">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+    </th:block>
+    
+    <h2>Panier:</h2>
+    <div th:utext="${donnes.afficher()}"></div>
+    <div th:utext="${donnes.getTotalPrice()}"></div>
+    
+    <form action="/valider" method="post">
+            <input type="submit" value="Valider la commande">
+    </form>
+    </body>
+</html>
