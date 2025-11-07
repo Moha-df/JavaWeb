@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <form action="/afficher" method="get">
+            <input type="submit" value="Afficher">
+        </form>
+        
+        <p>Formulaire</p>
+        <form action="/addDvd" method="post">
+            <input type="text" name="titleParam" th:value="${donnees.getDvd()?.title}">
+            <input type="text" name="priceParam" th:value="${donnees.getDvd()?.price}">
+            <input type="text" name="quantityParam" th:value="${donnees.getDvd()?.quantity}">
+            <input type="submit" value="Ajouter">
+        </form>
+        
+        <form action="/suivant" method="post">
+            <input type="submit" value="suivant">
+        </form>
+        
+        <form action="/precedent" method="post">
+            <input type="submit" value="precedent">
+        </form>
+        
+        <form action="/supprimer" method="post">
+            <input type="submit" value="supprimer">
+        </form>
+        
+        <div>prix total du stock :</div>
+        <div th:text="${donnees.prixTotal()}"></div>
+    </body>
+</html>
